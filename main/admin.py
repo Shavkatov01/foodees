@@ -1,3 +1,36 @@
 from django.contrib import admin
+from main.models import Home, About, Feature, Menu_Category, Menu
 
-# Register your models here.
+@admin.register(Home)
+class Home(admin.ModelAdmin):
+    list_display = ('title',)
+    list_display_links = ('title', )
+
+
+
+@admin.register(About)
+class About(admin.ModelAdmin):
+    list_display = ('about_title', 'article',)
+    list_display_links = ('about_title', 'article' )
+
+
+
+@admin.register(Feature)
+class Feature(admin.ModelAdmin):
+    list_display = ('title',)
+    list_display_links = ('title', )
+
+
+
+
+@admin.register(Menu_Category)
+class Menu_Category(admin.ModelAdmin):
+    list_display = ('title',)
+    list_display_links = ('title', )
+
+
+
+@admin.register(Menu)
+class Menu(admin.ModelAdmin):
+    list_display = ('title', 'category', 'food_name', 'food_price',)
+    list_display_links = ('title', 'category', 'food_name', 'food_price', )
