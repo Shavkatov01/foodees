@@ -1,12 +1,13 @@
 from django.shortcuts import render
 from django.views.generic import TemplateView, ListView, CreateView, DetailView, DeleteView, View
-from main.models import Menu, Home
+from main.models import Menu, Home, About, Feature
 
-class Home(TemplateView):
+class HomeView(TemplateView):
     model = Home
     template_name = 'main/home.html'
 
 
-#class Menu(ListView):
-    #model = Menu
-    #template_name = 'main/menu.html'
+class AboutView(ListView):
+    template_name = 'main/about.html'
+    model = About
+    
