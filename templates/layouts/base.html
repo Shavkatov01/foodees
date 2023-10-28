@@ -37,17 +37,17 @@
 			<div class="fh5co-main-nav">
 				<div class="container-fluid">
 					<div class="fh5co-menu-1">
-						<a href="{% url 'main:home' %}"; data-nav-section="home">Home</a>
-		            	<a href="{% url 'main:about' %}"; data-nav-section="about">About</a>
-						<a href="#" data-nav-section="features">Features</a>				
+						<a href="{% url 'main:home' %}">Home</a>
+		            	<a href="{% url 'main:about' %}">About</a>
+						<a href="{% url 'main:feature' %}">Features</a>				
 					</div>
 					<div class="fh5co-logo">
-						<a href="#">foodee</a>
+						<a href="{% url 'main:home' %}">foodee</a>
 					</div>
 					<div class="fh5co-menu-2">
-						<a href="#" data-nav-section="menu">Menu</a>
-						<a href="#" data-nav-section="events">Events</a>
-						<a href="#" data-nav-section="reservation">Reservation</a>
+						<a href="{% url 'main:menu' %}">Menu</a>
+						<a href="{% url 'main:event' %}">Events</a>
+						<a href="{% url 'main:contact' %}">Contact</a>
 					</div>
 				</div>
 				
